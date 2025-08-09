@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Music Therapy — Facial Expressions</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- face-api.js CDN -->
+  <script defer src="https://cdn.jsdelivr.net/gh/justadudewhohacks/face-api.js@master/dist/face-api.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <main>
+    <h1>Music Therapy — Facial Expressions</h1>
+    <p id="status">Loading models...</p>
+
+    <div id="camera-wrap">
+      <video id="video" width="480" height="360" autoplay muted></video>
+      <canvas id="overlay" width="480" height="360"></canvas>
+    </div>
+
+    <div id="controls">
+      <button id="startBtn">Start Camera & Audio</button>
+      <label><input type="checkbox" id="showBoxes" checked /> Show boxes/labels</label>
+    </div>
+
+    <section id="legend">
+      <h3>Detected emotion → Sound</h3>
+      <ul>
+        <li>happy → bright melody</li>
+        <li>sad → slow minor tone</li>
+        <li>angry → strong low tone</li>
+        <li>surprised → quick arpeggio</li>
+        <li>neutral → soft drone</li>
+        <li>fearful/disgusted → eerie tone</li>
+      </ul>
+    </section>
+
+    <p id="note">This demo synthesizes sounds in the browser using WebAudio (no mp3 files needed).</p>
+  </main>
+</body>
+</html>
